@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "mongodb": "^6.8.1"
+  }
+}

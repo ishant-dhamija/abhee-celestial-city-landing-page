@@ -1,0 +1,4 @@
+.netlify
+.vscode
+.env
+node_modules/

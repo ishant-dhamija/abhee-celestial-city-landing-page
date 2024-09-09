@@ -2758,7 +2758,7 @@ a {
   }
 }
 
-/* @media screen and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .kutup-nav-menu {
     color: #181717;
     background-color: #fff;
@@ -3132,7 +3132,7 @@ a {
   .image-14 {
     max-width: 90%;
   }
-} */
+}
 
 #w-node-e138f613-c476-8fb3-8644-4851321e86d7-1829f985 {
   grid-area: span 1 / span 1 / span 1 / span 1;

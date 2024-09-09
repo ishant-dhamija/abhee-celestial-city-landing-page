@@ -8,3 +8,8 @@
   from = "/success"
   to = "/success.html"
   status = 200
+
+[[redirects]]
+  from = "/form"
+  to = "/.netlify/functions/form"
+  status = 200

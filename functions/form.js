@@ -1,4 +1,14 @@
-import connectToDatabase from "../utils/mongoConnect";
+import { MongoClient } from "mongodb";
+
+let client = null;
+
+const connectToDatabase = async () => {
+  if (!client) {
+    client = new MongoClient(process.env.MONGO_URI);
+    await client.connect();
+  }
+  return client.db(process.env.MONGO_DB_NAME);
+};
 
 export const handler = async (event) => {
   try {

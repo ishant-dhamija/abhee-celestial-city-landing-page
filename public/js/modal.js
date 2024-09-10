@@ -6,7 +6,7 @@ var closeModal = document.getElementById("closeModal");
 window.onload = function () {
   setTimeout(function () {
     modal.style.display = "block";
-  }, 10000);
+  }, 15000);
 };
 
 // Handle form submission

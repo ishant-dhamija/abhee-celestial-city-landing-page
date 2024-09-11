@@ -49,3 +49,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+const urlParams = new URLSearchParams(window.location.search);
+const source = document.getElementById("source");
+source.value = urlParams.get("src");

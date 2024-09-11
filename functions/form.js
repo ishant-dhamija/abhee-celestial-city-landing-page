@@ -10,6 +10,12 @@ const connectToDatabase = async () => {
   return client.db(process.env.MONGO_DB_NAME);
 };
 
+const srcMap = {
+  gs: "google search",
+  gd: "google discovery",
+  fb: "facebook",
+};
+
 export const handler = async (event) => {
   try {
     if (event.httpMethod !== "POST") {
@@ -19,13 +25,11 @@ export const handler = async (event) => {
       };
     }
 
-    // Parse the request body
-    // const { name, contact, category } = JSON.parse(event.body);
-
     const formData = new URLSearchParams(event.body);
     const name = formData.get("name");
     const contact = formData.get("contact");
     const category = formData.get("category");
+    const src = formData.get("source");
 
     // Validate the required fields
     if (!name || !contact || !category) {
@@ -47,6 +51,7 @@ export const handler = async (event) => {
       name,
       contact,
       category,
+      source: srcMap[src] ?? "unknown",
       submittedAt: new Date(),
     });
 
